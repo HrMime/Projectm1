@@ -48,8 +48,9 @@ st.subheader('Describe your place in numbers!')
 
 # here you collect all inputs from the user into new objects
 age = st.selectbox('What is the age?', options=ohe.categories_[0])
-education = st.radio('Education', options=ohe.categories_[1])
-instant_bookable = st.checkbox('Instant Bookable')
+marital = st.radio('Martial', options=ohe.categories_[1])
+education = st.selectbox('What is the age?', options=ohe.categories_[2])
+ehousing = st.selectbox('What is the age?', options=ohe.categories_[3])
 accommodates = st.number_input('How many guest can come?', min_value=1, max_value=999)
 bedrooms = st.number_input('How many bedrooms are there?', min_value=1, max_value=999)
 beds = st.number_input('How many beds do you provide?', min_value=1, max_value=999)
