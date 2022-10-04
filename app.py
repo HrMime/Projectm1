@@ -87,7 +87,7 @@ if st.button('Predict! 🚀'):
     predicted_value = model_xgb.predict(line_to_pred)[0]
 
     #print out result to user
-    st.metric(label="Predicted output", value=f{round(predicted_value)})
+    st.metric(label="Predicted output", value=f'{round(predicted_value)}')
     
     #print SHAP explainer to user
     st.subheader(f'Wait, why {round(predicted_value)} kr? Explain, AI 🤖:')
