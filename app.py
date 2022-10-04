@@ -47,10 +47,11 @@ with st.expander("What's that app?"):
 st.subheader('Describe your place in numbers!')
 
 # here you collect all inputs from the user into new objects
-age = st.selectbox('What is the age?', options=ohe.categories_[0])
+job = st.selectbox('What is your jobtype?', options=ohe.categories_[0])
 marital = st.radio('Martial', options=ohe.categories_[1])
-education = st.selectbox('What is the age?', options=ohe.categories_[2])
-ehousing = st.selectbox('What is the age?', options=ohe.categories_[3])
+month = st.selectbox('month', options=ohe.categories_[2])
+weekday = st.selectbox('Weekday', options=ohe.categories_[3])
+poutcome = st.selectbox('poutcome', options=ohe.categories_[4])
 accommodates = st.number_input('How many guest can come?', min_value=1, max_value=999)
 bedrooms = st.number_input('How many bedrooms are there?', min_value=1, max_value=999)
 beds = st.number_input('How many beds do you provide?', min_value=1, max_value=999)
@@ -59,8 +60,8 @@ min_nights = st.number_input('How many nights should guest stay at least?', min_
 # make a nice button that triggers creation of a new data-line in the format that the model expects and prediction
 if st.button('Predict! 🚀'):
     # make a DF for categories and transform with one-hot-encoder
-    new_df_cat = pd.DataFrame({'neighbourhood_cleansed':n_hood,
-                'room_type':room_type}, index=[0])
+    new_df_cat = pd.DataFrame({'job':job,
+                'martial':marital}, index=[0])
     new_values_cat = pd.DataFrame(ohe.transform(new_df_cat), columns = cats , index=[0])
 
     # make a DF for the numericals and standard scale
