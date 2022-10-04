@@ -84,7 +84,7 @@ if st.button('Predict! 🚀'):
     predicted_value = model_xgb.predict(line_to_pred)[0]
 
     #print out result to user
-    st.metric(label="Predicted answer", if value=f'{predicted_value}' > 0: 'yes')
+    st.metric(label="Predicted answer", value=f'{predicted_value}')
     
     #print SHAP explainer to user
     st.subheader(f'Why {predicted_value}? See below:')
