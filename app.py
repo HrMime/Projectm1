@@ -12,10 +12,9 @@ import streamlit as st
 from streamlit_shap import st_shap # wrapper to display nice shap viz in the app
 
 st.set_page_config(
-    page_title="Airbnb Price Prediction",
-    page_icon="💸")
+    page_title="Bank marketing prediction")
 
-st.title('Predict Airbnb Prices in CPH')
+st.title('Predict output for customer')
 
 #this is how you can add images e.g. from unsplash (or loca image file)
 st.image('https://source.unsplash.com/0PSCd1wIrm4', caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
