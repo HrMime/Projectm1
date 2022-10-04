@@ -52,10 +52,8 @@ marital = st.radio('Martial', options=ohe.categories_[1])
 month = st.selectbox('month', options=ohe.categories_[2])
 weekday = st.selectbox('Weekday', options=ohe.categories_[3])
 poutcome = st.selectbox('poutcome', options=ohe.categories_[4])
-age = st.number_input('Age?', min_value=1, max_value=999)
-education = st.number_input('Education', min_value=1, max_value=999)
-beds = st.number_input('How many beds do you provide?', min_value=1, max_value=999)
-min_nights = st.number_input('How many nights should guest stay at least?', min_value=1, max_value=999)
+age = st.number_input('Age?', min_value=17, max_value=98)
+education = st.number_input('Education', min_value=0, max_value=7)
 
 # make a nice button that triggers creation of a new data-line in the format that the model expects and prediction
 if st.button('Predict! 🚀'):
