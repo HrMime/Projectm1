@@ -54,7 +54,6 @@ weekday = st.selectbox('Weekday', options=ohe.categories_[3])
 poutcome = st.selectbox('poutcome', options=ohe.categories_[4])
 age = st.number_input('Age?', min_value=17, max_value=98)
 education = st.number_input('Education', min_value=0, max_value=7)
-campagin = st.number_input('Campaign', min_value=0, max_value=7)
 previous = st.number_input('Previous', min_value=0, max_value=7)
 
 # make a nice button that triggers creation of a new data-line in the format that the model expects and prediction
@@ -70,7 +69,7 @@ if st.button('Predict! 🚀'):
     # make a DF for the numericals and standard scale
     new_df_num = pd.DataFrame({'age':age, 
                             'education': education,
-                            'campaign': campaign,
+                            'campaign': 1,
                             'previous': previous, 
                             'emp.var.rate': 1.1,
                             'cons.price.idx': 93.994,
