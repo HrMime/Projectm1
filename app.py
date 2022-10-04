@@ -46,9 +46,9 @@ with st.expander("What's that app?"):
 st.subheader('Costumer description')
 
 # here you collect all inputs from the user into new objects
-job = st.selectbox('What is your jobtype?', options=ohe.categories_[0])
+job = st.selectbox('What is his/hers jobtype?', options=ohe.categories_[0])
 marital = st.radio('Marital', options=ohe.categories_[1])
-poutcome = st.selectbox('poutcome', options=ohe.categories_[4])
+poutcome = st.selectbox('What was the previous outcome for this costumer?', options=ohe.categories_[4])
 age = st.number_input('Age?', min_value=17, max_value=98)
 education = st.number_input('Education', min_value=0, max_value=7)
 campaign = st.number_input('How many contacts have you made for this costumer for this campagin already?', min_value=0, max_value=35)
