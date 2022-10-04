@@ -14,10 +14,10 @@ from streamlit_shap import st_shap # wrapper to display nice shap viz in the app
 st.set_page_config(
     page_title="Bank marketing prediction")
 
-st.title('Predict output for customer')
+st.title('Will this given costumer say yes?')
 
 #this is how you can add images e.g. from unsplash (or loca image file)
-st.image('https://source.unsplash.com/0PSCd1wIrm4', caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+#st.image('https://source.unsplash.com/0PSCd1wIrm4', caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
 # use this decorator (--> @st.experimental_singleton) and 0-parameters function to only load and preprocess once
 @st.experimental_singleton
