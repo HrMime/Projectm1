@@ -61,15 +61,14 @@ min_nights = st.number_input('How many nights should guest stay at least?', min_
 if st.button('Predict! 🚀'):
     # make a DF for categories and transform with one-hot-encoder
     new_df_cat = pd.DataFrame({'job':job,
-                'martial':marital}, index=[0])
+                'martial':marital,
+                'month':month}, index=[0])
     new_values_cat = pd.DataFrame(ohe.transform(new_df_cat), columns = cats , index=[0])
 
     # make a DF for the numericals and standard scale
     new_df_num = pd.DataFrame({'age':age, 
                             'education': education, 
-                        'month':month, 
-                        'weekday':weekday, 
-                        'minimum_nights_avg_ntm':min_nights}, index=[0])
+                        }, index=[0])
     new_values_num = pd.DataFrame(scaler.transform(new_df_num), columns = new_df_num.columns, index=[0])  
     
     #bring all columns together
