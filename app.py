@@ -51,8 +51,8 @@ marital = st.radio('Marital', options=ohe.categories_[1])
 poutcome = st.selectbox('poutcome', options=ohe.categories_[4])
 age = st.number_input('Age?', min_value=17, max_value=98)
 education = st.number_input('Education', min_value=0, max_value=7)
-campaign = st.number_input('How many contacts have you made for this costumer for this campagin already?', min_value=1, max_value=35)
-previous = st.number_input('How many times have you contacted this client before?', min_value=0, max_value=7)
+campaign = st.number_input('How many contacts have you made for this costumer for this campagin already?', min_value=0, max_value=35)
+previous = st.number_input('How many times have you contacted this client before?', min_value=0, max_value=35)
 
 # make a nice button that triggers creation of a new data-line in the format that the model expects and prediction
 if st.button('Predict! 🚀'):
