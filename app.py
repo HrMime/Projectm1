@@ -47,8 +47,8 @@ with st.expander("What's that app?"):
 st.subheader('Describe your place in numbers!')
 
 # here you collect all inputs from the user into new objects
-n_hood = st.selectbox('Select Neighbourhood', options=ohe.categories_[0])
-room_type = st.radio('Select Room Type', options=ohe.categories_[1])
+age = st.selectbox('What's the age?', options=ohe.categories_[0])
+education = st.radio('Education', options=ohe.categories_[1])
 instant_bookable = st.checkbox('Instant Bookable')
 accommodates = st.number_input('How many guest can come?', min_value=1, max_value=999)
 bedrooms = st.number_input('How many bedrooms are there?', min_value=1, max_value=999)
