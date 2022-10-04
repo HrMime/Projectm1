@@ -1,8 +1,6 @@
-streamlit
-pickle
-numpy
-pandas
-itertools
-streamlit_shap
-xgboost
-sklearn
+matplotlib==3.5.3
+numpy==1.23.3
+pandas==1.4.4
+scikit_learn==1.1.2
+seaborn==0.12.0
+xgboost==1.6.2
