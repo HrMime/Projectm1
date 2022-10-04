@@ -56,10 +56,6 @@ age = st.number_input('Age?', min_value=17, max_value=98)
 education = st.number_input('Education', min_value=0, max_value=7)
 campagin = st.number_input('Campaign', min_value=0, max_value=7)
 previous = st.number_input('Previous', min_value=0, max_value=7)
-cons.price.idx = st.number_input('cons.price.idx', min_value=0, max_value=7)
-cons.conf.idx = st.number_input('cons.conf.idx', min_value=0, max_value=7)
-euribor3m = st.number_input('euribor3m', min_value=0, max_value=7)
-nr.employed = st.number_input('nr.employed', min_value=0, max_value=7)
 
 # make a nice button that triggers creation of a new data-line in the format that the model expects and prediction
 if st.button('Predict! 🚀'):
@@ -77,10 +73,10 @@ if st.button('Predict! 🚀'):
                             'campaign': campaign,
                             'previous': previous, 
                             'emp.var.rate': 1.1,
-                            'cons.price.idx': cons.price.idx,
-                            'cons.conf.idx': cons.conf.idx,
-                            'euribor3m': euribor3m,
-                            'nr.employed': nr.employed
+                            'cons.price.idx': 93.994,
+                            'cons.conf.idx': -36.4,
+                            'euribor3m': 4.857,
+                            'nr.employed': 5191.0
                         }, index=[0])
     new_values_num = pd.DataFrame(scaler.transform(new_df_num), columns = new_df_num.columns, index=[0])  
     
