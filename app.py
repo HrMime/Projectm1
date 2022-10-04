@@ -52,8 +52,8 @@ marital = st.radio('Martial', options=ohe.categories_[1])
 month = st.selectbox('month', options=ohe.categories_[2])
 weekday = st.selectbox('Weekday', options=ohe.categories_[3])
 poutcome = st.selectbox('poutcome', options=ohe.categories_[4])
-accommodates = st.number_input('How many guest can come?', min_value=1, max_value=999)
-bedrooms = st.number_input('How many bedrooms are there?', min_value=1, max_value=999)
+age = st.number_input('Age?', min_value=1, max_value=999)
+education = st.number_input('Education', min_value=1, max_value=999)
 beds = st.number_input('How many beds do you provide?', min_value=1, max_value=999)
 min_nights = st.number_input('How many nights should guest stay at least?', min_value=1, max_value=999)
 
@@ -65,10 +65,10 @@ if st.button('Predict! 🚀'):
     new_values_cat = pd.DataFrame(ohe.transform(new_df_cat), columns = cats , index=[0])
 
     # make a DF for the numericals and standard scale
-    new_df_num = pd.DataFrame({'instant_bookable':instant_bookable, 
-                            'accommodates': accommodates, 
-                        'bedrooms':bedrooms, 
-                        'beds':beds, 
+    new_df_num = pd.DataFrame({'age':age, 
+                            'education': education, 
+                        'month':month, 
+                        'weekday':weekday, 
                         'minimum_nights_avg_ntm':min_nights}, index=[0])
     new_values_num = pd.DataFrame(scaler.transform(new_df_num), columns = new_df_num.columns, index=[0])  
     
