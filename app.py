@@ -48,12 +48,19 @@ st.subheader('Describe your place in numbers!')
 
 # here you collect all inputs from the user into new objects
 job = st.selectbox('What is your jobtype?', options=ohe.categories_[0])
-marital = st.radio('Martial', options=ohe.categories_[1])
+marital = st.radio('Marital', options=ohe.categories_[1])
 month = st.selectbox('month', options=ohe.categories_[2])
 weekday = st.selectbox('Weekday', options=ohe.categories_[3])
 poutcome = st.selectbox('poutcome', options=ohe.categories_[4])
 age = st.number_input('Age?', min_value=17, max_value=98)
 education = st.number_input('Education', min_value=0, max_value=7)
+campagin = st.number_input('Campaign', min_value=0, max_value=7)
+previous = st.number_input('Previous', min_value=0, max_value=7)
+emp.var.rate = st.number_input('Emp.var.rate', min_value=0, max_value=7)
+cons.price.idx = st.number_input('cons.price.idx', min_value=0, max_value=7)
+cons.conf.idx = st.number_input('cons.conf.idx', min_value=0, max_value=7)
+euribor3m = st.number_input('euribor3m', min_value=0, max_value=7)
+nr.employed = st.number_input('nr.employed', min_value=0, max_value=7)
 
 # make a nice button that triggers creation of a new data-line in the format that the model expects and prediction
 if st.button('Predict! 🚀'):
@@ -67,7 +74,14 @@ if st.button('Predict! 🚀'):
 
     # make a DF for the numericals and standard scale
     new_df_num = pd.DataFrame({'age':age, 
-                            'education': education, 
+                            'education': education,
+                            'campaign': campaign,
+                            'previous': previous, 
+                            'emp.var.rate': emp.var.rate,
+                            'cons.price.idx': cons.price.idx,
+                            'cons.conf.idx': cons.conf.idx,
+                            'euribor3m': euribor3m,
+                            'nr.employed': nr.employed
                         }, index=[0])
     new_values_num = pd.DataFrame(scaler.transform(new_df_num), columns = new_df_num.columns, index=[0])  
     
