@@ -49,7 +49,6 @@ st.subheader('Describe your place in numbers!')
 # here you collect all inputs from the user into new objects
 job = st.selectbox('What is your jobtype?', options=ohe.categories_[0])
 marital = st.radio('Marital', options=ohe.categories_[1])
-month = st.selectbox('month', options=ohe.categories_[2])
 weekday = st.selectbox('Weekday', options=ohe.categories_[3])
 poutcome = st.selectbox('poutcome', options=ohe.categories_[4])
 age = st.number_input('Age?', min_value=17, max_value=98)
@@ -62,7 +61,7 @@ if st.button('Predict! 🚀'):
     # make a DF for categories and transform with one-hot-encoder
     new_df_cat = pd.DataFrame({'job':job,
                 'marital':marital,
-                'month':'may',
+                'month': 'oct',
                 'day_of_week':weekday,
                 'poutcome':poutcome}, index=[0])
     new_values_cat = pd.DataFrame(ohe.transform(new_df_cat), columns = cats , index=[0])
