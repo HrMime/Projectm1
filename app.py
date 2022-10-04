@@ -82,10 +82,9 @@ if st.button('Predict! 🚀'):
 
     #run prediction for 1 new observation
     predicted_value = model_xgb.predict(line_to_pred)[0]
-    predicted_value1 = if predicted_value == 1:'yes' else 'no'
 
     #print out result to user
-    st.metric(label="Predicted output", value=f'{round(predicted_value)}')
+    st.metric(label="Predicted output", value=f'{if predicted_value == 1:'yes' else 'no'}')
     
     #print SHAP explainer to user
     st.subheader(f'Why {predicted_value1}? See below:')
