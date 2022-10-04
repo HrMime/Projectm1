@@ -77,7 +77,7 @@ if st.button('Predict! 🚀'):
                             'education': education,
                             'campaign': campaign,
                             'previous': previous, 
-                            'emp.var.rate': emp.var.rate,
+                            'emp.var.rate': 1.1,
                             'cons.price.idx': cons.price.idx,
                             'cons.conf.idx': cons.conf.idx,
                             'euribor3m': euribor3m,
