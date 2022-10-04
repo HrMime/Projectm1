@@ -82,11 +82,12 @@ if st.button('Predict! 🚀'):
 
     #run prediction for 1 new observation
     predicted_value = model_xgb.predict(line_to_pred)[0]
+    predicted_value1 = if(predicted_value == 1, 'yes' else 'no') 
 
     #print out result to user
     st.metric(label="Predicted output", value=f'{round(predicted_value)}')
     
     #print SHAP explainer to user
-    st.subheader(f'Why {predicted_value.inverse_transform(y)}? See below:')
+    st.subheader(f'Why {predicted_value1}? See below:')
     shap_value = explainer.shap_values(line_to_pred)
     st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
