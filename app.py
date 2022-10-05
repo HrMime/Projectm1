@@ -24,9 +24,10 @@ with colT2:
    st.title('Bank Markerting Project 💣💥')
 
 
-tab1, tab2, tab3 = st.tabs(["Predictor tool SML", "SML Model Comparison", "SML"])
-
+tab1, tab2, tab3, tab4 = st.tabs(["Data Exploration","Predictor tool SML", "SML Model Comparison", "UML"])
 with tab1:
+
+with tab2:
 
     st.title('Will this given costumer say yes?')
 
@@ -127,7 +128,7 @@ with tab1:
         shap_value = explainer.shap_values(line_to_pred)
         st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=900)
 
-    with tab2:
+    with tab3:
         st.subheader("SML Model Accuracy")
         st.markdown("On this tab, we will explain why we used the XGB-model, and what parameters we made the decision on")
         with st.expander("What is the method for comparing the choosing of the three models?"):
@@ -157,3 +158,6 @@ with tab1:
         st.markdown("""Due to some technical issues with the Logistic regression, we decided to use the XGB Classifier
         for the model anyways, because the LR-model seems to do limited ietrations on the training data. We did not 
         have that problem with the XGB-model, so we went ahead and used the XGB for the prediction model on this webpage """)
+
+    with tab4: 
+       
