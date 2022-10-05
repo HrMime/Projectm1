@@ -29,7 +29,7 @@ tab1, tab2, tab3 = st.tabs(["Predictor tool SML", "SML Model Comparison", "SML"]
 
 with tab1:
 
-        st.title('Will this given costumer say yes?')
+    st.title('Will this given costumer say yes?')
 
     #st.image('https://source.unsplash.com/WgUHuGSWPVM', caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
