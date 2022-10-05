@@ -50,7 +50,7 @@ with tab1:
     data = data[data['job']==job_filter]
 
     # near real-time / live feed simulation 
-    for seconds in range(100):
+    for seconds in range(10):
 
         # creating metrices 
         avg_age = np.mean(data['age']) 
