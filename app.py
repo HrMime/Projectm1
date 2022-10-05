@@ -154,6 +154,6 @@ with tab1:
         st.markdown("2. **XGB Classifier**: 73,44% 🥈" )
         st.markdown("3. **Random Forest**: 71,30% 🥉" )
 
-        st.markdown("""Due to some technical issues, with the Logistic regression, we decided to use the XGB Classifier
+        st.markdown("""Due to some technical issues with the Logistic regression, we decided to use the XGB Classifier
         for the model anyways, because the LR-model seems to do limited ietrations on the training data. We did not 
-        have that problem with the XGB-model, so we went ahead and used that for the prediction model on this webpage """)
+        have that problem with the XGB-model, so we went ahead and used the XGB for the prediction model on this webpage """)
