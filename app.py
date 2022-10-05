@@ -31,7 +31,7 @@ with tab1:
 
         st.title('Will this given costumer say yes?')
 
-    st.image('https://source.unsplash.com/WgUHuGSWPVM', caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    #st.image('https://source.unsplash.com/WgUHuGSWPVM', caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
     data = pd.read_csv("https://raw.githubusercontent.com/Ceges98/BDS-Project/main/bank_marketing.csv", sep=";")
     data = data[data["education"].str.contains("unknown") == False]
