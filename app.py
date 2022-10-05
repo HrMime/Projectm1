@@ -103,7 +103,7 @@ with tab1:
         st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
 
     with tab2:
-        st.subheader("SML Model Comparison")
+        st.subheader("SML Model Accuracy")
         with st.expander("What is the method for comparing the choosing of the three models?"):
             st.markdown(""" The method for comparing, is done through running the notebook five times 
             and chekcing how much the accuracy of the three models each time. We end up with five values
@@ -127,3 +127,7 @@ with tab1:
         st.markdown("1. **Logistic Regression**: 74,50% 🏆" )
         st.markdown("2. **XGB Classifier**: 73,44% 🥈" )
         st.markdown("3. **Random Forest**: 71,30% 🥉" )
+
+        St.markdown("""Due to some technical issues, with the Logistic regression, we decided to use the XGB Classifier
+        for the model anyways, because the LR-model seems to do limited ietrations on the training data. We did not 
+        have that problem with the XGB-model, so we went ahead and used that for the prediction model on this webpage """)
