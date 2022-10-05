@@ -25,7 +25,7 @@ tab1, tab2, tab3 = st.tabs(["Overview", "HR Managererial Tool", "SML"])
 
 with tab1:
 
-st.title('Will this given costumer say yes?')
+st.subheader('Will this given costumer say yes?')
 
 #this is how you can add images e.g. from unsplash (or loca image file)
 #st.image('https://source.unsplash.com/0PSCd1wIrm4', caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
