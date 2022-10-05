@@ -120,7 +120,7 @@ with tab1:
         
         #Printing the result
         st.metric(label="Predicted answer", value=f'{predicted_value}')
-        st.subheader(f'Why {predicted_value}? 1 equals to yes, while 0 equals to no')
+        st.subheader(f'What does {predicted_value} mean? 1 equals to yes, while 0 equals to no')
 
         #Printing SHAP explainer
         st.subheader(f'Lets explain why the model predicts the output above! See below for SHAP value:')
