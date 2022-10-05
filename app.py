@@ -21,7 +21,7 @@ with colT2:
    st.title('HR Managing Tool Project')
 
 
-tab1, tab2, tab3 = st.tabs(["Predictor tool SML", "SML model Comparison", "SML"])
+tab1, tab2, tab3 = st.tabs(["Predictor tool SML", "SML Model Comparison", "SML"])
 
 with tab1:
 
@@ -104,6 +104,7 @@ with tab1:
 
     with tab2:
         st.subheader("SML Model Accuracy")
+        st.markdown("On this tab, we will explain why we used the XGB-model, and what parameters we made the decision on")
         with st.expander("What is the method for comparing the choosing of the three models?"):
             st.markdown(""" The method for comparing, is done through running the notebook five times 
             and chekcing how much the accuracy of the three models each time. We end up with five values
