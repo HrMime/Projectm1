@@ -11,6 +11,8 @@ import itertools # we need that to flatten ohe.categories_ into one list for col
 import streamlit as st
 from streamlit_shap import st_shap # wrapper to display nice shap viz in the app
 
+tab1, tab2, tab3 = st.tabs(["EDA", "Which of the three models perform best", "SML"])
+
 st.set_page_config(
     page_title="Bank marketing prediction")
 
