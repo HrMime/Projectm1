@@ -23,7 +23,7 @@ with colT2:
 
 tab1, tab2, tab3 = st.tabs(["Overview", "HR Managererial Tool", "SML"])
 
-with tab1
+with tab1:
 
 st.title('Will this given costumer say yes?')
 
@@ -102,4 +102,4 @@ if st.button('Predict! 🚀'):
     shap_value = explainer.shap_values(line_to_pred)
     st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
 
-    with tab2
+    with tab2:
