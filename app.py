@@ -21,7 +21,7 @@ st.set_page_config(page_title='Bank Marketing Project',
 
 colT1,colT2 = st.columns([10,20])
 with colT2:
-   st.title('HR Managing Tool Project')
+   st.title('Bank Markerting Project 💣')
 
 
 tab1, tab2, tab3 = st.tabs(["Predictor tool SML", "SML Model Comparison", "SML"])
