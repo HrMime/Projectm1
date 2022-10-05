@@ -11,6 +11,7 @@ import numpy as np
 import itertools # we need that to flatten ohe.categories_ into one list for columns
 import streamlit as st
 from streamlit_shap import st_shap # wrapper to display nice shap viz in the app
+import plotly.express as px
 
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
