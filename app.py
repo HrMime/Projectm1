@@ -115,4 +115,15 @@ with tab1:
             to be under 5%. Take a look at this page to see the documentation for the values of the 5 runs.
             """)
         st.subheader("Logistic Regression")
-        st.markdown("The five values for had a range of 0,78% which a good deal under the 5% 🤓 ")
+        st.markdown("The five values for this model had a range of 0,78% which a good deal under the 5% 🤓 ")
+
+        st.subheader("XGBClassifier")
+        st.markdown("The five values for this model had a range of 2,23% which is also under 5% 🤗 ")
+
+        st.subheader("RandomForrester")
+        st.markdown("The five values for this model had a range of 1,23% which is also under 5% 🎉 ")
+
+        st.subheader("Ranking of the models by the mean accuracy of the 5 runs")
+        st.markdown("1. Logistic Regression: 74,50%" )
+        st.markdown("2. XGB Classifier: 73,44%" )
+        st.markdown("3. Random Forest: 71,30%" )
