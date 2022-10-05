@@ -24,6 +24,10 @@ colT1,colT2 = st.columns([10,20])
 with colT2:
    st.title('Bank Markerting Project 💣💥')
 
+data = pd.read_csv("https://raw.githubusercontent.com/Ceges98/BDS-Project/main/bank_marketing.csv", sep=";")
+data = data[data["education"].str.contains("unknown") == False]
+data = data[data["marital"].str.contains("unknown") == False]
+
 
 tab1, tab2, tab3, tab4 = st.tabs(["Data Exploration","Predictor tool SML", "SML Model Comparison", "UML"])
 with tab1:
@@ -75,9 +79,7 @@ with tab1:
 
         #st.image('https://source.unsplash.com/WgUHuGSWPVM', caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
-        data = pd.read_csv("https://raw.githubusercontent.com/Ceges98/BDS-Project/main/bank_marketing.csv", sep=";")
-        data = data[data["education"].str.contains("unknown") == False]
-        data = data[data["marital"].str.contains("unknown") == False]
+
 
         @st.experimental_singleton
         def read_objects():
