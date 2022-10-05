@@ -10,16 +10,18 @@ import numpy as np
 import itertools # we need that to flatten ohe.categories_ into one list for columns
 import streamlit as st
 from streamlit_shap import st_shap # wrapper to display nice shap viz in the app
-st.set_page_config(
-    page_title="Bank marketing prediction")
 
-tab1, tab2, tab3 = st.tabs(["EDA", "Which of the three models perform best", "SML"])
+##Streamlit interface:
+st.set_page_config(page_title='HR Managing Tool',
+                    page_icon="🛠",
+                    layout='wide')
 
-with tab1:
-st.markdown("markdown")
-with tab2:
-st.markdown ("Compare models")
-with tab3:
+colT1,colT2 = st.columns([10,20])
+with colT2:
+   st.title('HR Managing Tool Project')
+
+
+tab1, tab2, tab3 = st.tabs(["Overview", "HR Managererial Tool", "SML"])
 
 st.set_page_config(
     page_title="Bank marketing prediction")
