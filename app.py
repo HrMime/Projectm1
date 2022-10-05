@@ -105,12 +105,12 @@ with tab1:
     with tab2:
         st.title("SML Model Comparison")
         with st.expander("What is the method for comparing the choosing of the three models?"):
-        st.markdown(""" The method for comparing, is done through running the notebook five times 
-        and chekcing how much the accuracy of the three models each time. We end up with five values
-        for each model, and then we are comparing the mean, to which model overall performs the best.
-        There are several random elements in the code, for instance we undersample the data in order
-        to balance it for SML purposes. The undersample is done randomly and everytime we run the code
-        the undersample will include different obersvations. Further the train-test split consist of a 
-        random element. By running the note 5 times we expect the deviation to be under of the accuracy
-        to be under 5%. Take a look at this page to see the documentation for the values of the 5 runs.
-        """)
+            st.markdown(""" The method for comparing, is done through running the notebook five times 
+            and chekcing how much the accuracy of the three models each time. We end up with five values
+            for each model, and then we are comparing the mean, to which model overall performs the best.
+            There are several random elements in the code, for instance we undersample the data in order
+            to balance it for SML purposes. The undersample is done randomly and everytime we run the code
+            the undersample will include different obersvations. Further the train-test split consist of a 
+            random element. By running the note 5 times we expect the deviation to be under of the accuracy
+            to be under 5%. Take a look at this page to see the documentation for the values of the 5 runs.
+            """)
