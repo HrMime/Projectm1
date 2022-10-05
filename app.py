@@ -208,7 +208,7 @@ with tab1:
             have that problem with the XGB-model, so we went ahead and used the XGB for the prediction model on this webpage """)
 
         with tab4: 
-            data = pd.read_csv("https://raw.githubusercontent.com/Ceges98/BDS-Project/main/bank_marketing.csv", sep=";")
+            data1 = pd.read_csv("https://raw.githubusercontent.com/Ceges98/BDS-Project/main/bank_marketing.csv", sep=";")
             with st.expander("UML"):
                 st.title("Unsupervised Machine Learning")
                 st.subheader('This will be a journey through the creation of UML customer segmentation, and an analysis of the obtained result.')
@@ -304,19 +304,19 @@ with tab1:
     #we fit clusters on our scaled data
     clusterer.fit(data_raw_scaled)
     #we then copy the clusters into the original file
-    data['cluster'] = clusterer.labels_
+    data1['cluster'] = clusterer.labels_
     #can use the clusters to fx. see the mean of age in our clusters.
     #note that age does not seem a big factor in clustering as the mean is mostly the same.
-    data.groupby('cluster').age.mean()
+    data1.groupby('cluster').age.mean()
     #prepping our vis_data
     vis_data = pd.DataFrame(embeddings)
-    vis_data['cluster'] = data['cluster']
-    vis_data['education'] = data['education']
-    vis_data['age'] = data['age']
-    vis_data['job'] = data['job']
-    vis_data['marital'] = data['marital']
-    vis_data['housing'] = data['housing']
-    vis_data['loan'] = data['loan']
+    vis_data['cluster'] = data1['cluster']
+    vis_data['education'] = data1['education']
+    vis_data['age'] = data1['age']
+    vis_data['job'] = data1['job']
+    vis_data['marital'] = data1['marital']
+    vis_data['housing'] = data1['housing']
+    vis_data['loan'] = data1['loan']
     vis_data.columns = ['x', 'y', 'cluster','education', 'age', 'job', 'marital', 'housing', 'loan']
     #finally plotting the data with relevant tooltips
     #for unknown reasons a null cluster is made alongside our other clusters
