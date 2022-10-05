@@ -23,8 +23,6 @@ with colT2:
 
 tab1, tab2, tab3 = st.tabs(["Overview", "HR Managererial Tool", "SML"])
 
-st.set_page_config(
-    page_title="Bank marketing prediction")
 
 st.title('Will this given costumer say yes?')
 
