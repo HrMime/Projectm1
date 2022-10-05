@@ -13,7 +13,7 @@ from streamlit_shap import st_shap # wrapper to display nice shap viz in the app
 
 ##Streamlit interface:
 st.set_page_config(page_title='Bank Marketing Project',
-                    page_icon="Shark",
+                    page_icon="🐙",
                     layout='wide')
 
 colT1,colT2 = st.columns([10,20])
