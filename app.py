@@ -258,7 +258,7 @@ with tab1:
                     st.write(data_raw.head(50))
                 
                 with tab04:
-                @st.experimental_singleton
+                    @st.experimental_singleton
                     numerification = '''def age(data_raw):
                     data_raw.loc[data_raw['age'] <= 30, 'age'] = 1
                     data_raw.loc[(data_raw['age'] > 30) & (data_raw['age'] <= 45), 'age'] = 2
