@@ -103,3 +103,4 @@ if st.button('Predict! 🚀'):
     st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
 
     with tab2:
+        st.title("this is tab 2")
