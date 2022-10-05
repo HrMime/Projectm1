@@ -28,7 +28,7 @@ with tab1:
     st.subheader('Will this given costumer say yes?')
 
     #this is how you can add images e.g. from unsplash (or loca image file)
-    #st.image('https://images.unsplash.com/photo-1515606378517-3451a4fa2e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80', caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    #st.image('https://images.unsplash.com/photo-1577346895253-445f05a6670d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY2NDY1MzMwNQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080', caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
     # use this decorator (--> @st.experimental_singleton) and 0-parameters function to only load and preprocess once
     @st.experimental_singleton
