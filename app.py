@@ -21,7 +21,7 @@ with colT2:
    st.title('HR Managing Tool Project')
 
 
-tab1, tab2, tab3 = st.tabs(["Predictor tool SML", "HR Managererial Tool", "SML"])
+tab1, tab2, tab3 = st.tabs(["Predictor tool SML", "SML model Comparison", "SML"])
 
 with tab1:
 
@@ -103,4 +103,5 @@ with tab1:
         st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
 
     with tab2:
-        st.title("this is tab 2")
+        st.title("SML Model Comparison")
+        st.markdown("")
