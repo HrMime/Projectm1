@@ -28,6 +28,7 @@ with colT2:
 data = pd.read_csv("https://raw.githubusercontent.com/Ceges98/BDS-Project/main/bank_marketing.csv", sep=";")
 data = data[data["education"].str.contains("unknown") == False]
 data = data[data["marital"].str.contains("unknown") == False]
+data = data[data["job"].str.contains("unknown") == False]
 
 
 tab1, tab2, tab3, tab4 = st.tabs(["Data Exploration","Predictor tool SML", "SML Model Comparison", "UML"])
