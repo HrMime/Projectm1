@@ -103,7 +103,7 @@ with tab1:
         st_shap(shap.force_plot(explainer.expected_value, shap_value, line_to_pred), height=400, width=500)
 
     with tab2:
-        st.title("SML Model Comparison")
+        st.subheader("SML Model Comparison")
         with st.expander("What is the method for comparing the choosing of the three models?"):
             st.markdown(""" The method for comparing, is done through running the notebook five times 
             and chekcing how much the accuracy of the three models each time. We end up with five values
@@ -114,3 +114,5 @@ with tab1:
             random element. By running the note 5 times we expect the deviation to be under of the accuracy
             to be under 5%. Take a look at this page to see the documentation for the values of the 5 runs.
             """)
+        st.subheader("Logistic Regression")
+        st.markdown("The five values for had a range of 0,78% which a good deal under the 5% icon="🤓" ")
