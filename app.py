@@ -15,10 +15,10 @@ st.set_page_config(
 
 tab1, tab2, tab3 = st.tabs(["EDA", "Which of the three models perform best", "SML"])
 
-with tab3:
-
+with tab1:
+st.markdown("markdown")
 with tab2:
-
+st.markdown ("Compare models")
 with tab3:
 
 st.set_page_config(
