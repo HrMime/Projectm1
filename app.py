@@ -27,11 +27,6 @@ with colT2:
 
 tab1, tab2, tab3, tab4 = st.tabs(["Data Exploration","Predictor tool SML", "SML Model Comparison", "UML"])
 with tab1:
-    st.set_page_config(
-        page_title = 'Data Dashboard',
-        page_icon = '✅',
-        layout = 'wide'
-    )
 
     # dashboard title
 
