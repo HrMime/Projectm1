@@ -124,6 +124,6 @@ with tab1:
         st.markdown("The five values for this model had a range of 1,23% which is also under 5% 🎉 ")
 
         st.subheader("Ranking of the models by the mean accuracy of the 5 runs")
-        st.markdown("1. Logistic Regression: 74,50%" )
-        st.markdown("2. XGB Classifier: 73,44%" )
-        st.markdown("3. Random Forest: 71,30%" )
+        st.markdown("1. **Logistic Regression**: 74,50%" )
+        st.markdown("2. **XGB Classifier**: 73,44%" )
+        st.markdown("3. **Random Forest**: 71,30%" )
