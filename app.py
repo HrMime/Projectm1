@@ -115,4 +115,4 @@ with tab1:
             to be under 5%. Take a look at this page to see the documentation for the values of the 5 runs.
             """)
         st.subheader("Logistic Regression")
-        st.markdown("The five values for had a range of 0,78% which a good deal under the 5% icon="🤓" ")
+        st.markdown("The five values for had a range of 0,78% which a good deal under the 5% icon=🤓 ")
