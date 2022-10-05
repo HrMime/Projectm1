@@ -29,7 +29,6 @@ tab1, tab2, tab3, tab4 = st.tabs(["Data Exploration","Predictor tool SML", "SML 
 with tab1:
 
 with tab2:
-
     st.title('Will this given costumer say yes?')
 
     #st.image('https://source.unsplash.com/WgUHuGSWPVM', caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
