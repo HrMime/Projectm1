@@ -2,7 +2,7 @@
 
 import pandas as pd
 import pickle # un-pickling stuff from training notebook
-from xgboost import XGBRegressor # we use a trained XGBoost model...and therefore need to load it
+from xgboost import XGBClassifier # we use a trained XGBoost model...and therefore need to load it
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
 import shap # add prediction explainability
